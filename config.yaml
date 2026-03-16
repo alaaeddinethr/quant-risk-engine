@@ -1,0 +1,59 @@
+# ============================================================
+#  Quantitative Risk Engine — Configuration
+# ============================================================
+
+portfolio:
+  default_tickers:
+    - "AAPL"
+    - "MSFT"
+    - "GOOGL"
+    - "JPM"
+    - "GS"
+    - "BRK-B"
+  default_weights: null       # null = equal weight
+  benchmark: "^GSPC"          # S&P 500
+
+data:
+  years: 5                    # Historical data window
+  frequency: "1d"             # Daily prices
+  cache_dir: "data/cache"
+
+risk:
+  confidence_levels: [0.95, 0.99]
+  holding_period: 1           # days
+  n_simulations: 10000        # Monte Carlo paths
+  random_seed: 42
+
+  var_methods:
+    - historical
+    - parametric_normal
+    - parametric_t
+    - monte_carlo
+
+stress_scenarios:
+  gfc:
+    name: "Global Financial Crisis"
+    start: "2008-09-01"
+    end:   "2009-03-31"
+  covid:
+    name: "COVID-19 Crash"
+    start: "2020-02-19"
+    end:   "2020-03-23"
+  rate_shock_2022:
+    name: "2022 Rate Shock"
+    start: "2022-01-01"
+    end:   "2022-10-31"
+  dotcom:
+    name: "Dot-com Bubble"
+    start: "2000-03-10"
+    end:   "2002-10-09"
+
+optimization:
+  n_portfolios: 5000          # Points on efficient frontier
+  risk_free_rate: 0.045       # Annual (US 10Y ~4.5%)
+  constraints:
+    min_weight: 0.0           # Long-only
+    max_weight: 0.40          # Max 40% per asset
+
+dashboard:
+  port: 8501
