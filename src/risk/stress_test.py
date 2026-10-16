@@ -19,12 +19,10 @@ Reference:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
 
 import numpy as np
 import pandas as pd
 import yfinance as yf
-
 
 # ─── Scenario Definitions ─────────────────────────────────────────────────────
 
@@ -150,7 +148,7 @@ class StressTester:
         prices = self._download_scenario(self.tickers, cfg["start"], cfg["end"])
 
         if prices.empty:
-            print(f"     ⚠ No data available")
+            print("     ⚠ No data available")
             return None
 
         # Some tickers may not exist in that period
