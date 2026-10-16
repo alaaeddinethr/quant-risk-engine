@@ -31,27 +31,19 @@ quant-risk-engine/
 │
 ├── src/
 │   ├── data/
-│   │   ├── market_data.py         # yfinance downloader, returns computation
-│   │   └── preprocessing.py       # Cleaning, normalization, outlier handling
+│   │   └── market_data.py         # yfinance downloader, returns computation
 │   │
 │   ├── risk/
 │   │   ├── var.py                 # VaR: Historical, Parametric (Normal/t), Monte Carlo
-│   │   ├── cvar.py                # Conditional VaR (Expected Shortfall)
 │   │   ├── monte_carlo.py         # Full portfolio simulation engine
 │   │   └── stress_test.py         # Historical scenario replay (2008, COVID, 2022)
 │   │
 │   ├── portfolio/
 │   │   ├── metrics.py             # Sharpe, Sortino, Calmar, Max Drawdown
-│   │   ├── optimizer.py           # Markowitz efficient frontier + SLSQP
-│   │   └── correlation.py         # Rolling correlation, clustering
+│   │   └── optimizer.py           # Markowitz efficient frontier + SLSQP
 │   │
 │   └── dashboard/
 │       └── app.py                 # Streamlit interactive dashboard
-│
-├── notebooks/
-│   ├── 01_EDA_Returns.ipynb
-│   ├── 02_Risk_Analysis.ipynb
-│   └── 03_Portfolio_Optimization.ipynb
 │
 ├── tests/
 │   ├── test_var.py
