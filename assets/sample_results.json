@@ -1,0 +1,85 @@
+{
+  "period": "2019-01-03 to 2024-12-30",
+  "days": 1508,
+  "cagr": 0.2654,
+  "ann_volatility": 0.2332,
+  "sharpe_rf0": 1.01,
+  "max_drawdown": -0.3398,
+  "excess_kurtosis": 13.81,
+  "var_full_sample": {
+    "Historical 95%": {
+      "var": -0.0206,
+      "cvar": -0.0346
+    },
+    "Parametric (Normal) 95%": {
+      "var": -0.0232,
+      "cvar": -0.0294
+    },
+    "Parametric (Student-t) 95%": {
+      "var": -0.0195,
+      "cvar": -0.0324
+    },
+    "Monte Carlo 95%": {
+      "var": -0.0237,
+      "cvar": -0.0298
+    },
+    "Historical 99%": {
+      "var": -0.0407,
+      "cvar": -0.0604
+    },
+    "Parametric (Normal) 99%": {
+      "var": -0.0332,
+      "cvar": -0.0382
+    },
+    "Parametric (Student-t) 99%": {
+      "var": -0.0382,
+      "cvar": -0.0585
+    },
+    "Monte Carlo 99%": {
+      "var": -0.0339,
+      "cvar": -0.039
+    }
+  },
+  "backtest_99": {
+    "historical": {
+      "days_tested": 1258,
+      "exceptions": 30,
+      "expected": 12.6,
+      "per_250_days": 6.0,
+      "kupiec_p": 0.0,
+      "basel_zone": "yellow"
+    },
+    "normal": {
+      "days_tested": 1258,
+      "exceptions": 37,
+      "expected": 12.6,
+      "per_250_days": 7.4,
+      "kupiec_p": 0.0,
+      "basel_zone": "yellow"
+    },
+    "student_t": {
+      "days_tested": 1258,
+      "exceptions": 34,
+      "expected": 12.6,
+      "per_250_days": 6.8,
+      "kupiec_p": 0.0,
+      "basel_zone": "yellow"
+    },
+    "ewma": {
+      "days_tested": 1258,
+      "exceptions": 33,
+      "expected": 12.6,
+      "per_250_days": 6.6,
+      "kupiec_p": 0.0,
+      "basel_zone": "yellow"
+    },
+    "fhs": {
+      "days_tested": 1258,
+      "exceptions": 20,
+      "expected": 12.6,
+      "per_250_days": 4.0,
+      "kupiec_p": 0.053,
+      "basel_zone": "green"
+    }
+  }
+}
