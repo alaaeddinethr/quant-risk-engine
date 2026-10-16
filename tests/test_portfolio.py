@@ -4,14 +4,19 @@ test_portfolio.py
 Unit tests for portfolio metrics and optimization.
 """
 
-import numpy as np
-import pandas as pd
-import pytest
 import sys
 from pathlib import Path
 
+import numpy as np
+import pandas as pd
+import pytest
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.portfolio.metrics import PortfolioAnalyzer, PortfolioMetrics, asset_contribution
+from src.portfolio.metrics import (
+    PortfolioAnalyzer,
+    PortfolioMetrics,
+    asset_contribution,
+)
 from src.portfolio.optimizer import EfficientFrontier, OptimizedPortfolio
 
 

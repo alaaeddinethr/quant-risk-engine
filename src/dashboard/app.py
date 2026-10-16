@@ -17,19 +17,19 @@ Run:
 
 import sys
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
-import plotly.graph_objects as go
 import plotly.express as px
-from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from src.data.market_data import PriceLoader
-from src.risk.var import PortfolioVaR, VaREngine
-from src.risk.monte_carlo import MonteCarloEngine
 from src.portfolio.metrics import PortfolioAnalyzer, asset_contribution
 from src.portfolio.optimizer import EfficientFrontier
+from src.risk.monte_carlo import MonteCarloEngine
+from src.risk.var import PortfolioVaR
 
 # ─── Page Config ─────────────────────────────────────────────────────────────
 

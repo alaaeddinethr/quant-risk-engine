@@ -5,14 +5,15 @@ Unit tests for VaR/CVaR computations.
 Tests mathematical properties, not exact values.
 """
 
-import numpy as np
-import pandas as pd
-import pytest
 import sys
 from pathlib import Path
 
+import numpy as np
+import pandas as pd
+import pytest
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.risk.var import VaREngine, PortfolioVaR, VaRResult
+from src.risk.var import PortfolioVaR, VaREngine, VaRResult
 
 
 def make_returns(seed=42, n=1260, mu=0.0005, sigma=0.012):
